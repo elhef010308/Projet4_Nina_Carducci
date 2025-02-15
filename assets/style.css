@@ -69,6 +69,7 @@ body {
 
 .picture img {
 	width: 100%;
+	height: auto;  /* AJOUT */
 
 }
 #about-me {
@@ -108,6 +109,7 @@ body {
 .nav-pills .nav-link {
 	color: #000
 }
+
 .item-column {
 	position: relative;
 	margin-bottom: 0 !important;
@@ -124,7 +126,7 @@ body {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-	padding: .5em;
+	padding: 0.5em;
 }
 .mg-prev, .mg-next {
 	width: 30px;
@@ -143,16 +145,20 @@ body {
 	margin: auto;
 	padding-block: 3em;
 }
+
+/* Texte des citations */
 .quote__text {
 	font-family: Spectral;
 	font-style: italic;
 	font-weight: 300;
+	font-size:27px;       /* AJOUT */
+	text-align:justify;   /* AJOUT */
 
 }
 .quote__author {
 	font-family: Spectral;
 	font-weight: 800;
-	font-size: 22px;
+	font-size: 22px;    
 }
 
 #services {
@@ -201,6 +207,8 @@ body {
 #contact .container {
 	display: flex;
 }
+
+/* cette section mise en commentaire ? */
 .picture.right::before {
 	content: ' ';
 	background-color: #BEB45A;
@@ -211,6 +219,8 @@ body {
 	right: 0;
 	z-index: -1;
 }
+/* cette section mise en commentaire ? */
+
 .form-container {
 	flex : 2;
 
@@ -243,6 +253,50 @@ input[type="submit"] {
 	background-color: #BEB45A;
 	padding: .5em 1em
 }
+
+/* Ajout au fichier CSS */
+footer {
+	padding:10px 0 10px 100px;
+	display: flex;
+	justify-content:flex-start;
+	gap: 200px;
+	flex-direction: row;
+	align-items:flex-start;
+}
+
+footer li {
+	padding: 0 0 0 3px;
+	list-style: none;
+}
+
+.active-tag {
+	font-weight: 500;
+}
+
+.nav-link:hover {
+	background: rgba(216, 195, 109, 0.3);
+	transition: color 0.3s ease;
+	border-radius:0;
+}
+
+
+/* ? AJOUT : 
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: solid 1px;
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 15px;
+}
+
+.contact-info p {
+  margin: 5px 0;
+}
+
+*/
 
 @media all and (max-width: 1180px) {
 	.picture {

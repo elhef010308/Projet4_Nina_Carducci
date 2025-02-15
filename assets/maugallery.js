@@ -1,9 +1,15 @@
 (function($) {
+
+  // INITIALISATION DE LA GALERIE
   $.fn.mauGallery = function(options) {
     var options = $.extend($.fn.mauGallery.defaults, options);
     var tagsCollection = [];
+
+    // INITIALISATOON DE LA GALERIE POUR CHAQUE ÉLÉMENT SÉLECTIONNÉ
     return this.each(function() {
       $.fn.mauGallery.methods.createRowWrapper($(this));
+
+      // CRÉATION DE LA LIGHTBOX
       if (options.lightBox) {
         $.fn.mauGallery.methods.createLightBox(
           $(this),
@@ -11,14 +17,19 @@
           options.navigation
         );
       }
+
+      // INITIALISATION DES ÉVÈNEMENTS D'ÉCOUTE
       $.fn.mauGallery.listeners(options);
 
+      // PARCOURIR LES ÉLÉMENTS DE LA GALERIE
       $(this)
         .children(".gallery-item")
         .each(function(index) {
           $.fn.mauGallery.methods.responsiveImageItem($(this));
           $.fn.mauGallery.methods.moveItemInRowWrapper($(this));
           $.fn.mauGallery.methods.wrapItemInColumn($(this), options.columns);
+
+          // COLLECTE DES CATÉGORIES DES ÉLÉMENTS DE LA GALERIE
           var theTag = $(this).data("gallery-tag");
           if (
             options.showTags &&
@@ -29,6 +40,7 @@
           }
         });
 
+      // AFFICHER LES TAGS (si activés dans les options)
       if (options.showTags) {
         $.fn.mauGallery.methods.showItemTags(
           $(this),
@@ -36,19 +48,24 @@
           tagsCollection
         );
       }
-
       $(this).fadeIn(500);
     });
   };
+
+  // OPTIONS PAR DÉFAUT POUR LA GALERIE 
   $.fn.mauGallery.defaults = {
-    columns: 3,
-    lightBox: true,
-    lightboxId: null,
-    showTags: true,
-    tagsPosition: "bottom",
-    navigation: true
+    columns: 3,                  /* Nombre de colonnes*/
+    lightBox: true,              /* Activation de la lightbox */
+    lightboxId: null,            /* Identifiant de la lightbox */
+    showTags: true,              /* Afficher (ou non) les tags */
+    tagsPosition: "bottom",      /* Position des tags (bas par défaut) */
+    navigation: true             /* Activer la navigation dans la lightbox */
   };
+
+  // ÉCOUTEUR D'ÉVÈNEMENTS
   $.fn.mauGallery.listeners = function(options) {
+
+    // CLIC SUR UN ÉLÉMENT DE LA GALERIE POUR OUVRIR LA LIGHTBOX
     $(".gallery-item").on("click", function() {
       if (options.lightBox && $(this).prop("tagName") === "IMG") {
         $.fn.mauGallery.methods.openLightBox($(this), options.lightboxId);
@@ -57,15 +74,23 @@
       }
     });
 
+    // CLIC SUR UN TAG POUR FILTRER LES IMAGES
     $(".gallery").on("click", ".nav-link", $.fn.mauGallery.methods.filterByTag);
+
+    // NAVIGATION DANS LA LIGHTBOX (image précédente)
     $(".gallery").on("click", ".mg-prev", () =>
       $.fn.mauGallery.methods.prevImage(options.lightboxId)
     );
+
+    // NAVIGATION DANS LA LIGHTBOX (image suivante)
     $(".gallery").on("click", ".mg-next", () =>
       $.fn.mauGallery.methods.nextImage(options.lightboxId)
     );
   };
+
   $.fn.mauGallery.methods = {
+
+    // CRÉER L'ENVELOPPE DE LIGNE POUR LES ÉLÉMENTS DE LA GALERIE
     createRowWrapper(element) {
       if (
         !element
@@ -76,6 +101,8 @@
         element.append('<div class="gallery-items-row row"></div>');
       }
     },
+
+    // AJOUT D'ÉLÉMENT DANS UNE COLONNE
     wrapItemInColumn(element, columns) {
       if (columns.constructor === Number) {
         element.wrap(
@@ -105,20 +132,28 @@
         );
       }
     },
+
+    // DÉPLACER UN ÉLÉMENT DANS L'ENVELOPPE DE LIGNE 
     moveItemInRowWrapper(element) {
       element.appendTo(".gallery-items-row");
     },
+
+    // AJOUT D'UNE CLASSE RESPONSIBLE A UNE IMAGE
     responsiveImageItem(element) {
       if (element.prop("tagName") === "IMG") {
         element.addClass("img-fluid");
       }
     },
+
+    // OUVERTURE DE LA LIGHTBOX
     openLightBox(element, lightboxId) {
       $(`#${lightboxId}`)
         .find(".lightboxImage")
         .attr("src", element.attr("src"));
       $(`#${lightboxId}`).modal("toggle");
     },
+
+    // NAVIGATION VERS L'IMAGE PRÉCÉDENTE
     prevImage() {
       let activeImage = null;
       $("img.gallery-item").each(function() {
@@ -150,7 +185,7 @@
 
       $(imagesCollection).each(function(i) {
         if ($(activeImage).attr("src") === $(this).attr("src")) {
-          index = i ;
+          index = i - 1;
         }
       });
       next =
@@ -158,17 +193,35 @@
         imagesCollection[imagesCollection.length - 1];
       $(".lightboxImage").attr("src", $(next).attr("src"));
     },
+
+    // NAVIGATION VERS L'IMAGE SUIVANTE
     nextImage() {
       let activeImage = null;
-      $("img.gallery-item").each(function() {
+
+      /* Parcourir toutes les images de la galerie */
+      $("img.gallery-item").each(function() {   
+        
+        /* Comparer la src de chaque image à celle actuellement affichée dans la lightbox */
         if ($(this).attr("src") === $(".lightboxImage").attr("src")) {
+
+          /* Si une image est trouvée on la stockes dans "activeImage" */
           activeImage = $(this);
         }
       });
+
+      /* Récupérer le tag actuellement actif */
       let activeTag = $(".tags-bar span.active-tag").data("images-toggle");
+      
+      /* Construire un tableau d'images */
       let imagesCollection = [];
+
+      /* Ajouter toutes les images si le tag est "all" */
       if (activeTag === "all") {
+
+        /* Sélectionner chaque conteneur d'image */
         $(".item-column").each(function() {
+
+          /* Récupérer l'image dans le conteneur */
           if ($(this).children("img").length) {
             imagesCollection.push($(this).children("img"));
           }
@@ -178,23 +231,32 @@
           if (
             $(this)
               .children("img")
+
+              /* Vérifier si le tag de l'image correspond au tag actif */
               .data("gallery-tag") === activeTag
           ) {
             imagesCollection.push($(this).children("img"));
           }
         });
       }
+
+      /* Une fois l'image trouvée, son index est stocké dans la variable "index" */
       let index = 0,
         next = null;
 
+      /* Parcourir toutes les images collectées */
       $(imagesCollection).each(function(i) {
         if ($(activeImage).attr("src") === $(this).attr("src")) {
-          index = i;
+          index = i + 1;
         }
       });
+
+      /* Déterminer quelle image afficher ensuite */
       next = imagesCollection[index] || imagesCollection[0];
       $(".lightboxImage").attr("src", $(next).attr("src"));
     },
+
+    // CRÉATION DE LA LIGHTBOX
     createLightBox(gallery, lightboxId, navigation) {
       gallery.append(`<div class="modal fade" id="${
         lightboxId ? lightboxId : "galleryLightbox"
@@ -218,6 +280,8 @@
                 </div>
             </div>`);
     },
+
+    // AFFICHAGE DES TAGS DE LA GALERIE
     showItemTags(gallery, position, tags) {
       var tagItems =
         '<li class="nav-item"><span class="nav-link active active-tag"  data-images-toggle="all">Tous</span></li>';
@@ -235,19 +299,32 @@
         console.error(`Unknown tags position: ${position}`);
       }
     },
+
+    // FILTRAGE DES IMAGES PAR TAG
     filterByTag() {
+
+      /* Vérifier sur le bouton est déjà actif */
       if ($(this).hasClass("active-tag")) {
         return;
       }
-      $(".active-tag").removeClass("active active-tag");
-      $(this).addClass("active-tag");
 
+      /* Enlever les classes ACTIVE et ACTIVE-TAG de l'ancien bouton actif */
+      /* Ajouter ces mêmes classes au bouton cliqué  */
+      $(".active-tag").removeClass("active active-tag");
+      $(this).addClass("active active-tag");               /***** AJOUT de la classe "active" *****/
+
+      /* Récupérer le tag à filtrer */
       var tag = $(this).data("images-toggle");
 
+      /* Parcourir tous les éléments de la galerie */
       $(".gallery-item").each(function() {
+
+        /* Cacher tous les éléments au départ */
         $(this)
           .parents(".item-column")
           .hide();
+
+        /* Afficher les éléments correspondants au TAG */
         if (tag === "all") {
           $(this)
             .parents(".item-column")
