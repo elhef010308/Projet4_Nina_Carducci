@@ -27,8 +27,48 @@
 	<script src="./assets/scripts-min.js"></script>
 
 	<!-- Données structurées (A AJOUTER) -->
-	<script>
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema;org", 
+		"@graph": [
+			{
+				"@type": "Person",
+				"name": "Nina Carducci",
+				"url"; "nina-carducci.github.io",
+				"jobTitle": "Photographe professionnelle",
+				"description": "Photographe professionnelle basée à Bordeaux, spécialisée dans les shooting, la création d'album et la retouche photo."
+				"sameAs": [
+					"",
+					"",
+				],
+				"contactPoint": {
+					"@type": "ContactPoint",
+					"telephone": "05 56 67 78 89",
+					"contactType": "customer service",
+					"areaServed": {
+						"@type": "Place",
+						"name": "Bordeaux"
+					}
+				}
+			},
+			{
+				"@context": "https://schema.org",  
+				"@type": "Service",
+				"name": "Shooting, Création d'album ou Retouches",
+				"provider": {
+					"@type": "Person",
+					"name": "Nina Carducci"
+				},
+				"serviceType": "Photographie professionnelle",
+				"areaServed": {
+					"@type": "Place",
+					"name": "Bordeaux"
+				}
+			}
+		] 
+	}
 	</script>
+
 </head>
 
 <body>
@@ -104,26 +144,14 @@
 				<div id="about-me">
 					<h2 class="about-me__title">A propos de moi</h2>
 					<p class="about-me__introduction">Devenir photographe était pour moi une évidence. Comme si j’y
-						étais
-						prédestiné.
-						Saisir un moment, une émotion, une situation, un endroit, une lumière et les rendre immortels,
-						voilà
-						ce
-						qui me fait vibrer.</p>
+						étais prédestiné. Saisir un moment, une émotion, une situation, un endroit, une lumière et les 
+						rendre immortels, voilà ce qui me fait vibrer.</p>
 					<p>Nous passons notre vie à chercher le bonheur, et lorsque nous y touchons, nous n’avons qu’une
-						envie :
-						le
-						figer au travers de photographies
-						pour le savourer avec les personnes qui sont importantes à nos yeux, ou le partager au plus
-						grand
-						nombre.
+						envie : le figer au travers de photographies pour le savourer avec les personnes qui sont 
+						importantes à nos yeux, ou le partager au plus grand nombre.
 						C’est ce que je vous propose : saisir ces merveilleux moments au travers de mon regard, mon
-						approche, ma
-						technique.
-						Rendre ces moments immortels, afin que vous puissiez y puiser de l’amour, du bonheur, de la
-						tendresse et
-						de lumière à chaque fois
-						que vous poserez les yeux sur vos photos.</p>
+						approche, ma technique. Rendre ces moments immortels, afin que vous puissiez y puiser de l’amour, 
+						du bonheur, de la tendresse et de lumière à chaque fois que vous poserez les yeux sur vos photos.</p>
 				</div>
 			</div>
 		</section>
@@ -203,9 +231,7 @@
 						<div class="service__description">
 							<h3>Shooting photo</h3>
 							<p>Pour capturer vos moments les plus précieux et garder un souvenir impérissable. Je me
-								déplace
-								en
-								Île-de-France pour réaliser vos photos</p>
+								déplace en Île-de-France pour réaliser vos photos</p>
 						</div>
 						<div class="service__price">
 							<h4>350€/demi journée</h4>
@@ -217,8 +243,7 @@
 						<div class="service__description">
 							<h3>Retouches</h3>
 							<p>Vous souhaitez retoucher vos photos pour un résultat professionnel ? Bénéficier d’un
-								rendu
-								optimal pour vos publications</p>
+								rendu optimal pour vos publications</p>
 						</div>
 						<div class="service__price">
 							<h4>50€/photo</h4>
@@ -229,9 +254,7 @@
 						<div class="service__description">
 							<h3>Album photos</h3>
 							<p>Partagez avec vos proches et vos clients les photos des moments partagés ensemble à
-								travers
-								un
-								album photo personnalisé</p>
+								travers un album photo personnalisé</p>
 						</div>
 						<div class="service__price">
 							<h4>400€ album A4</h4>
@@ -244,9 +267,7 @@
 				<figure>
 					<blockquote>
 						<p class="quote__text">De manière inconsciente, je crois, je guette un regard, une expression,
-							des
-							traits ou une nostalgie
-							capable de résumer ou plus exactement de révéler une vie</p>
+							des traits ou une nostalgie capable de résumer ou plus exactement de révéler une vie</p>
 					</blockquote>
 					<figcaption class="quote__author">- Richard Avedon</figcaption>
 				</figure>
