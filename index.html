@@ -2,12 +2,39 @@
 <html> 
 
 <head>
-	<!-- Métadonnées -->
+	
+	<!-- Encodage et affichage responsive -->	
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Nina Carducci, photographe professionnelle située à Bordeaux, propose ses services
-				pour des Shooting, des retouches ou la création d'albums photos ">
-	<title>Nina Carducci - Photographe</title>
+	
+	<!-- Meta description (SEO) -->
+	<meta name="description" content="Nina Carducci, photographe professionnelle située à Bordeaux, je réalise shooting, albums et retouches photos !">
+	
+	<!-- Indexation par les moteurs de recherche -->
+	<meta name="robots" content="index, follow">
+	
+	<!-- Titre de la page -->
+	<title>Nina Carducci - Photographe à Bordeaux</title>
+
+	<!-- Open Graphe (Fecbook, LinkedIn) -->
+	<meta property="og:title" content="Nina Carducci - Photographe professionnelle">
+	<meta property="og:type" content="website">	
+	<meta property="og:description" content="Venez découvrir mon travail de photographe professionnelle">
+	<meta property="og:url" content="https://elhef010308.github.io/Projet4_Nina_Carducci/">    
+	<meta property="og:image" content="https://elhef010308.github.io/Projet4_Nina_Carducci/assets/images-webP-copie/Nina.webp">
+	<meta property="og:site_name" content="Nina Carducci - Photographe à Bordeaux"> 
+	<meta property="og:locale" content="fr_FR">
+	<meta property="og:profile:first_name" content="Nina">
+	<meta property="og:profile:last_name" content="Carducci">
+  	<meta property="og:profile:instagram" content="https://www.instagram.com/ninacarducci.photo/?hl=fr">
+	
+	<!-- Twitter meta tags -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Nina Carducci : Photographe professionnelle située à Bordeaux">
+	<meta name="twitter:description" content="Nina Carducci, photographe professionnelle située à Bordeaux, je réalise shooting, albums et retouches photos !">
+	<meta name="twitter:url" content="https://elhef010308.github.io/Projet4_Nina_Carducci/">    
+	<meta name="twitter:image" content="https://elhef010308.github.io/Projet4_Nina_Carducci/assets/images-webP-copie/Nina.webp"> 
+	<meta name="twitter:image:alt" content="Portrait de la photographe Nina Carducci"> 
 
 	<!-- Feuilles de stye -->
 	<link rel="stylesheet" href="./assets/bootstrap/bootstrap.min.css">
@@ -20,54 +47,118 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 	<!-- Scripts JS -->
-	<script src="./assets/bootstrap/bootstrap.bundle.min.js"></script>
+	<script src="./assets/bootstrap/bootstrap.bundle.min.js" defer></script>
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
-		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-	<script src="./assets/maugallery-min.js"></script>
-	<script src="./assets/scripts-min.js"></script>
+		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous" defer></script>
+	<script src="./assets/maugallery-min.js" defer></script>
+	<script src="./assets/scripts-min.js" defer></script>
 
 	<!-- Données structurées (A AJOUTER) -->
 	<script type="application/ld+json">
 	{
-		"@context": "https://schema;org", 
+		"@context": "https://schema.org", 
 		"@graph": [
 			{
 				"@type": "Person",
+				"@id": "https://nina-carducci.com#person",
 				"name": "Nina Carducci",
-				"url"; "nina-carducci.github.io",
+				"url": "https://elhef010308.github.io/Projet4_Nina_Carducci/",
 				"jobTitle": "Photographe professionnelle",
-				"description": "Photographe professionnelle basée à Bordeaux, spécialisée dans les shooting, la création d'album et la retouche photo."
-				"sameAs": [
-					"",
-					"",
-				],
+				"description": "Photographe professionnelle basée à Bordeaux, spécialisée dans les shooting, la création d'album et la retouche photo.",
+				"priceRange": "50€ - 400€",
+				"address": {
+					"@type": "PostalAddress",
+					"streetAddress": "68 avenue Alsace-Lorraine",
+					"addressLocality": "Bordeaux",
+					"postalCode": "33200",
+					"addressCountry": "FR"
+				},
 				"contactPoint": {
 					"@type": "ContactPoint",
 					"telephone": "05 56 67 78 89",
-					"contactType": "customer service",
+					"contactType": "customer support",
 					"areaServed": {
 						"@type": "Place",
 						"name": "Bordeaux"
 					}
+					"sameAs": [
+                		"https://www.instagram.com/ninacarducci.photo/?hl=fr",
+                		"https://elhef010308.github.io/Projet4_Nina_Carducci/assets/images-webP-copie/Nina.webp"
+            		]
 				}
 			},
-			{
-				"@context": "https://schema.org",  
+			{  
 				"@type": "Service",
-				"name": "Shooting, Création d'album ou Retouches",
+				"name": "Shooting photos",
+				"serviceType": "Photographie professionnelle",
 				"provider": {
 					"@type": "Person",
+					"@id": "https://nina-carducci.com#person",
 					"name": "Nina Carducci"
 				},
+				"offers": {
+					"@type": "Offer",
+					"priceCurrency": "EUR",
+					"price": "350",
+					"priceSpecification": {
+						"@type": "UnitPriceSpecification",
+						"unitCode": "HUR",
+						"referenceQuantity": {
+							"@type": "QuantitativeValue",
+							"value": "4",
+							"unitText": "heures"
+						}
+					},
+				}
+				"@type": "Service",
+				"name": "Création d'un album photos",
 				"serviceType": "Photographie professionnelle",
-				"areaServed": {
-					"@type": "Place",
-					"name": "Bordeaux"
+				"provider": {
+					"@type": "Person",
+					"@id": "https://nina-carducci.com#person",
+					"name": "Nina Carducci"
+				},
+				"offers": {
+					"@type": "Offer",
+        			"priceCurrency": "EUR",
+        			"price": "400",
+					"priceSpecification": {
+						"@type": "UnitPriceSpecification",
+          				"unitCode": "C62",
+          				"referenceQuantity": {
+							"@type": "QuantitiveValue",
+							"value": "30",
+							"unitText": "pages recto verso",
+						}
+					}
+				}
+				"@type": "Service",
+				"name": "Retouches photo",
+				"serviceType": "Photographie professionnelle",
+				"provider": {
+					"@type": "Person",
+					"@id": "https://nina-carducci.com#person",
+					"name": "Nina Carducci"
+				},
+				"offers": {
+					"@type": "Offer",
+        			"priceCurrency": "EUR",
+        			"price": "50",
+					"priceSpecification": {
+						"@type": "UnitPriceSpecification",
+          				"unitCode": "C62",
+          				"referenceQuantity": {
+							"@type": "QuantitiveValue",
+							"value": "1",
+							"unitText": "photo",
+						}
+					}
 				}
 			}
 		] 
 	}
 	</script>
+	<!-- A SAVOIR => "unitCode": "C62" => unité sans classification spécifique (comme une photo) -->
 
 </head>
 
