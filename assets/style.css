@@ -152,7 +152,6 @@ body {
 	font-style: italic;
 	font-weight: 300;
 	font-size:27px;       /* AJOUT */
-	text-align:justify;   /* AJOUT */
 
 }
 .quote__author {
@@ -270,7 +269,7 @@ footer li {
 }
 
 .active-tag {
-	font-weight: 500;
+	color:black!important;
 }
 
 .nav-link:hover {
@@ -278,7 +277,6 @@ footer li {
 	transition: color 0.3s ease;
 	border-radius:0;
 }
-
 
 
 @media all and (max-width: 1180px) {
@@ -388,6 +386,12 @@ footer li {
 	}
 	.picture {
 		width: 80%;
+	}
+	footer {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		gap: 20px;
 	}
 }
 

@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-<html lang="fr"> 
+<html lang="fr">
 
 <head>
-	
 	<!-- Encodage et affichage responsive -->	
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +11,7 @@
 	
 	<!-- Indexation par les moteurs de recherche -->
 	<meta name="robots" content="index, follow">
-	
+
 	<!-- Titre de la page -->
 	<title>Nina Carducci - Photographe à Bordeaux</title>
 
@@ -36,142 +35,138 @@
 	<meta name="twitter:image" content="https://elhef010308.github.io/Projet4_Nina_Carducci/assets/images-webP-copie/Nina.webp"> 
 	<meta name="twitter:image:alt" content="Portrait de la photographe Nina Carducci"> 
 
-	<!-- Feuilles de stye -->
-	<link rel="stylesheet" href="./assets/bootstrap/bootstrap.min.css">
-	<link rel="stylesheet" href="./assets/style-min.css">
-	<link rel="stylesheet"
-		href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap">
+	<!-- Feuilles de style -->
+	<link rel="stylesheet" href="./assets/bootstrap/bootstrap.min.css" defer>
+	<link rel="stylesheet" href="./assets/style-min.css" defer>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap">
 
-	<!-- Connexion anticipée à un domaine spécifique -->
+	<!-- Connexion anticipée à un domaine spécifique -->	
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-	<!-- Scripts JS -->
+	
 	<script src="./assets/bootstrap/bootstrap.bundle.min.js" defer></script>
-	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
-		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous" defer></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 	<script src="./assets/maugallery-min.js" defer></script>
 	<script src="./assets/scripts-min.js" defer></script>
 
 	<!-- Données structurées (A AJOUTER) -->
 	<script type="application/ld+json">
-	{
-		"@context": "https://schema.org", 
-		"@graph": [
-			{
-				"@type": "Person",
-				"@id": "https://nina-carducci.com#person",
-				"name": "Nina Carducci",
-				"url": "https://elhef010308.github.io/Projet4_Nina_Carducci/",
-				"jobTitle": "Photographe professionnelle",
-				"description": "Photographe professionnelle basée à Bordeaux, spécialisée dans les shooting, la création d'album et la retouche photo.",
-				"priceRange": "50€ - 400€",
-				"address": {
-					"@type": "PostalAddress",
-					"streetAddress": "68 avenue Alsace-Lorraine",
-					"addressLocality": "Bordeaux",
-					"postalCode": "33200",
-					"addressCountry": "FR"
-				},
-				"geo": {
-					"@type": "GeoCoordinates",
-					"latitude": "44.846805572509766",
-					"longitude": "-0.6071873307228088"
-				},
-				"contactPoint": {
-					"@type": "ContactPoint",
-					"telephone": "05 56 67 78 89",
-					"contactType": "customer support",
-					"areaServed": {
-						"@type": "Place",
-						"name": "Bordeaux"
+		{
+			"@context": "https://schema.org", 
+			"@graph": [
+				{
+					"@type": "Person",
+					"@id": "https://nina-carducci.com#person",
+					"name": "Nina Carducci",
+					"url": "https://elhef010308.github.io/Projet4_Nina_Carducci/",
+					"jobTitle": "Photographe professionnelle",
+					"description": "Photographe professionnelle basée à Bordeaux, spécialisée dans les shooting, la création d'album et la retouche photo.",
+					"priceRange": "50€ - 400€",
+					"openingHours": "Mo-Fr 10:00-19:00",
+					"address": {
+						"@type": "PostalAddress",
+						"streetAddress": "68 avenue Alsace-Lorraine",
+						"addressLocality": "Bordeaux",
+						"postalCode": "33200",
+						"addressCountry": "FR"
 					},
-					"sameAs": [
-                		"https://www.instagram.com/ninacarducci.photo/?hl=fr"
-            		]
-				}
-			},
-			{  
-				"@type": "Service",
-				"name": "Shooting photos",
-				"serviceType": "Photographie professionnelle",
-				"provider": {
-					"@type": "Person",
-					"@id": "https://nina-carducci.com#person",
-					"name": "Nina Carducci"
+					"geo": {
+						"@type": "GeoCoordinates",
+						"latitude": "44.846805572509766",
+						"longitude": "-0.6071873307228088"
+					},
+					"contactPoint": {
+						"@type": "ContactPoint",
+						"telephone": "05 56 67 78 89",
+						"contactType": "customer support",
+						"areaServed": {
+							"@type": "Place",
+							"name": "Bordeaux"
+						},
+						"sameAs": [
+							"https://www.instagram.com/ninacarducci.photo/?hl=fr"
+						]
+					}
 				},
-				"offers": {
-					"@type": "Offer",
-					"priceCurrency": "EUR",
-					"price": "350",
-					"priceSpecification": {
-						"@type": "UnitPriceSpecification",
-						"unitCode": "HUR",
-						"referenceQuantity": {
-							"@type": "QuantitativeValue",
-							"value": "4",
-							"unitText": "heures"
+				{  
+					"@type": "Service",
+					"name": "Shooting photos",
+					"serviceType": "Photographie professionnelle",
+					"provider": {
+						"@type": "Person",
+						"@id": "https://nina-carducci.com#person",
+						"name": "Nina Carducci"
+					},
+					"offers": {
+						"@type": "Offer",
+						"priceCurrency": "EUR",
+						"price": "350",
+						"priceSpecification": {
+							"@type": "UnitPriceSpecification",
+							"unitCode": "HUR",
+							"referenceQuantity": {
+								"@type": "QuantitativeValue",
+								"value": "4",
+								"unitText": "heures"
+							}
+						}
+					}
+				},
+				{
+					"@type": "Service",
+					"name": "Création d'un album photos",
+					"serviceType": "Photographie professionnelle",
+					"provider": {
+						"@type": "Person",
+						"@id": "https://nina-carducci.com#person",
+						"name": "Nina Carducci"
+					},
+					"offers": {
+						"@type": "Offer",
+						"priceCurrency": "EUR",
+						"price": "400",
+						"priceSpecification": {
+							"@type": "UnitPriceSpecification",
+							  "unitCode": "C62",
+							  "referenceQuantity": {
+								"@type": "QuantitativeValue",
+								"value": "30",
+								"unitText": "pages recto verso"
+							}
+						}
+					}
+				},
+				{
+					"@type": "Service",
+					"name": "Retouches photo",
+					"serviceType": "Photographie professionnelle",
+					"provider": {
+						"@type": "Person",
+						"@id": "https://nina-carducci.com#person",
+						"name": "Nina Carducci"
+					},
+					"offers": {
+						"@type": "Offer",
+						"priceCurrency": "EUR",
+						"price": "50",
+						"priceSpecification": {
+							"@type": "UnitPriceSpecification",
+							  "unitCode": "C62",
+							  "referenceQuantity": {
+								"@type": "QuantitativeValue",
+								"value": "1",
+								"unitText": "photo"
+							}
 						}
 					}
 				}
-			},
-			{
-				"@type": "Service",
-				"name": "Création d'un album photos",
-				"serviceType": "Photographie professionnelle",
-				"provider": {
-					"@type": "Person",
-					"@id": "https://nina-carducci.com#person",
-					"name": "Nina Carducci"
-				},
-				"offers": {
-					"@type": "Offer",
-        			"priceCurrency": "EUR",
-        			"price": "400",
-					"priceSpecification": {
-						"@type": "UnitPriceSpecification",
-          				"unitCode": "C62",
-          				"referenceQuantity": {
-							"@type": "QuantitativeValue",
-							"value": "30",
-							"unitText": "pages recto verso"
-						}
-					}
-				}
-			},
-			{
-				"@type": "Service",
-				"name": "Retouches photo",
-				"serviceType": "Photographie professionnelle",
-				"provider": {
-					"@type": "Person",
-					"@id": "https://nina-carducci.com#person",
-					"name": "Nina Carducci"
-				},
-				"offers": {
-					"@type": "Offer",
-        			"priceCurrency": "EUR",
-        			"price": "50",
-					"priceSpecification": {
-						"@type": "UnitPriceSpecification",
-          				"unitCode": "C62",
-          				"referenceQuantity": {
-							"@type": "QuantitativeValue",
-							"value": "1",
-							"unitText": "photo"
-						}
-					}
-				}
-			}
-		] 
-	}
+			] 
+		}
 	</script>
 	<!-- A SAVOIR => "unitCode": "C62" => unité sans classification spécifique (comme une photo) -->
-
 </head>
 
 <body>
-
 	<!-- Ajout de la balise HEADER -->
 	<header>
 		<div class="top-header">
@@ -185,7 +180,7 @@
 					<li><a href="#services">Service</a></li>
 					<li><a href="#contact">Contact</a></li>
 					<li><a class="social-link" href="https://www.instagram.com/ninacarducci.photo/?hl=fr"
-							target="_blank"><img src="assets/images-webP-copie/instagram-logo.png" alt="Logo Instagram"></a></li>
+							target="_blank"><img src="assets/images-webP-copie/instagram-logo.png" alt="Logo Instagram" whidth="20px" height="20px"></a></li>
 				</ul>
 			</nav>
 		</div>
@@ -240,7 +235,7 @@
 		<section>
 			<div id="about">
 				<div class="picture left">
-					<img src="./assets/images-webP-copie/Nina.webp" alt="Portrait de la photographe Nina Carducci" width="620px" height="618px">
+					<img src="./assets/images-webP-copie/Nina.webp" alt="Portrait de la photographe Nina Carducci" width="620px" height="620px">
 				</div>
 				<div id="about-me">
 					<h2 class="about-me__title">A propos de moi</h2>
@@ -266,7 +261,7 @@
 						<img data-gallery-tag="Concert" class="gallery-item"
 							src="./assets/images-webP-copie/gallery/concerts/Aaron-Paul.webp"
 							alt="Foule visible de dos lors d'un concert, levant les mains en l'air sous une lumière d'ambiance rouge"
-							loading="lazy" width="690px" height="920px"/>
+							loading="lazy" width="615px" height="920px"/>
 
 						<img data-gallery-tag="Entreprises" class="gallery-item"
 							src="./assets/images-webP-copie/gallery/entreprise/Ali-Morshedlou.webp"
@@ -435,5 +430,4 @@
 		</div>
 	</footer>
 </body>
-
 </html>
