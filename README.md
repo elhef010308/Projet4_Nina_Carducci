@@ -78,27 +78,6 @@ Pour résumer le cadre de votre mission, vous allez donc :
  
 Comme convenu, voici les infos dont vous aurez besoin pour mon référencement local :
 
-Objet : RE RE Proposition d’optimisation de votre SEO
-
-De : Nina Carducci
-
-À : Moi
-
-Merci pour vos précisions durant notre appel. 
-
- 
-
-Pour résumer le cadre de votre mission, vous allez donc : 
-
-faire une optimisation globale du site, tant sur les performances que sur le SEO ;
-mettre en place le référencement local en utilisant Schema.org ;
-ajouter les metas pour les réseaux sociaux ;
-faire les modifications liées à l’accessibilité du site ;
-produire un rapport d’optimisation présentant toutes vos actions et leur impact.
- 
-
-Comme convenu, voici les infos dont vous aurez besoin pour mon référencement local :
-
 - Mon adresse : 68 avenue Alsace-Lorraine, 33200 Bordeaux
 
 - Mon numéro de téléphone : 05 56 67 78 89
@@ -119,28 +98,26 @@ Vous êtes donc maintenant prêt à débuter ce projet pour votre nouveau client
 
 ## **LES ÉTAPES DU PROJET**
 
-**- ÉTAPE 1 :** M 
+**- ÉTAPE 1 :** Prenez en main le code source et débuggez le site 
 
-**- ÉTAPE 2 :** D
+**- ÉTAPE 2 :** Listez les optimisations pouvant être réalisées
 
-**- ÉTAPE 3 :** I
+**- ÉTAPE 3 :** Optimisez les performances du site
 
-**- ÉTAPE 4 :** A
+**- ÉTAPE 4 :** Optimisez le SEO technique
 
-**- ÉTAPE 5 :** A
+**- ÉTAPE 5 :** Ajoutez le référencement local et réseaux sociaux
 
-**- ÉTAPE 6 :** R
+**- ÉTAPE 6 :** Corrigez l'accessibilité
 
-**- ÉTAPE 7 :** G
+**- ÉTAPE 7 :** Générez des rapports finaux et relisez les documents
 
 
 
 ## **COMPÉTENCES DÉVELOPPÉES**
 
-- M
+- Augmentation du trafic grâce au référencement naturel (SEO)
 
-- C
+- Optimisation du référencement d'un site (SEO) en améliorant ses performances techniques
 
-- G
-
-- C
+- Conception d'un contenu web accessible
